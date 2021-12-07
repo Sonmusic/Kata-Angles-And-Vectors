@@ -27,5 +27,11 @@ namespace VectorsAndAngles
             double dot = ((this.vector[0] * b.vector[0]) + (this.vector[1] * b.vector[1]));
             return dot;
         }
+
+        public double AngleBetween(Vector b)
+        {
+            double Angle = (this.DotProduct(b)/(this.magnitude() * b.magnitude()));
+            return Angle;
+        }
     }
 }

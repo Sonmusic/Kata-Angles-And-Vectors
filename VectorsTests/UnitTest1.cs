@@ -37,5 +37,23 @@ namespace VectorsTests
             double dot = vectora.DotProduct(vectorb);
             Assert.AreNotEqual(dot, 3.1);
         }
+
+        [TestMethod]
+        public void Return_True_AngleBetween_Vector12_Vector11()
+        {
+            VectorsAndAngles.Vector vectora = new VectorsAndAngles.Vector(1, 2);
+            VectorsAndAngles.Vector vectorb = new VectorsAndAngles.Vector(1, 1);
+            double Angle = vectora.AngleBetween(vectorb);
+            Assert.AreEqual(Angle, 0.9486832980505138);
+        }
+        [TestMethod]
+        public void Return_False_AngleBetween_Vector12_Vector11()
+        {
+            VectorsAndAngles.Vector vectora = new VectorsAndAngles.Vector(1, 2);
+            VectorsAndAngles.Vector vectorb = new VectorsAndAngles.Vector(1, 1);
+            double Angle = vectora.AngleBetween(vectorb);
+            Assert.AreNotEqual(Angle, 3.25);
+        }
+
     }
 }
