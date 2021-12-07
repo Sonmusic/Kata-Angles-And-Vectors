@@ -20,5 +20,22 @@ namespace VectorsTests
             double magn = vector.magnitude();
             Assert.AreNotEqual(magn, 2.25);
         }
+
+        [TestMethod]
+        public void Return_True_DotProduct_Vector12_Vector11()
+        {
+            VectorsAndAngles.Vector vectora = new VectorsAndAngles.Vector(1, 2);
+            VectorsAndAngles.Vector vectorb = new VectorsAndAngles.Vector(1, 1);
+            double dot = vectora.DotProduct(vectorb);
+            Assert.AreEqual(dot, 3);
+        }
+        [TestMethod]
+        public void Return_False_DotProduct_Vector12_Vector11()
+        {
+            VectorsAndAngles.Vector vectora = new VectorsAndAngles.Vector(1, 2);
+            VectorsAndAngles.Vector vectorb = new VectorsAndAngles.Vector(1, 1);
+            double dot = vectora.DotProduct(vectorb);
+            Assert.AreNotEqual(dot, 3.1);
+        }
     }
 }
